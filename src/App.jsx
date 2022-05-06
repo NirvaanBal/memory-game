@@ -19,11 +19,13 @@ function App() {
       setValues([]);
     } else {
       setValues([...values, value]);
-
       setNumbers(shuffle(10));
-      setScore(values.length);
     }
   };
+
+  useEffect(() => {
+    setScore(values.length);
+  }, [values]);
 
   return (
     <>
