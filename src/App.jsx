@@ -31,13 +31,15 @@ function App() {
     <>
       <Header />
       <Scoreboard best={topScore} score={score} />
-      {numbers.map((number, index) => (
-        <Card
-          key={index}
-          value={number}
-          handleClick={() => getRandomNumbers(number)}
-        />
-      ))}
+      <div className="cards">
+        {numbers.map((number, index) => (
+          <Card
+            key={index}
+            value={number}
+            handleClick={() => getRandomNumbers(number)}
+          />
+        ))}
+      </div>
     </>
   );
 }
