@@ -55,6 +55,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  gap: 15px;
 }
 
 .scoreboard h3:nth-child(2) {

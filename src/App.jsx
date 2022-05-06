@@ -26,22 +26,19 @@ function App() {
 
   const changeDifficulty = (e) => {
     const level = e.target.textContent.toLowerCase();
-    if (level === 'easy') {
-      setDifficulty(50);
-      setNumbers(shuffle(difficulty));
-    } else if (level === 'medium') {
-      setDifficulty(100);
-      setNumbers(shuffle(difficulty));
-    } else {
-      setDifficulty(200);
-      setNumbers(shuffle(difficulty));
-    }
+    if (level === 'easy') setDifficulty(100);
+    else if (level === 'medium') setDifficulty(1000);
+    else setDifficulty(10000);
   };
 
   useEffect(() => {
-    setScore(values.length);
+    setNumbers(shuffle(difficulty));
+    setScore(0);
+    setValues([]);
+  }, [difficulty]);
 
-    return () => null;
+  useEffect(() => {
+    setScore(values.length);
   }, [values]);
 
   return (
