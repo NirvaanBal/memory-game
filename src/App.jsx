@@ -1,5 +1,13 @@
+import Header from './components/Header';
+import Scoreboard from './components/Scoreboard';
+
 function App() {
-  return <h1>Memory Card Game</h1>;
+  return (
+    <>
+      <Header />
+      <Scoreboard />
+    </>
+  );
 }
 
 export default App;
