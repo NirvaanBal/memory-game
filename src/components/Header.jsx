@@ -8,9 +8,6 @@ function Header() {
       <p>
         <b>Game ends on selecting same input twice.</b>
       </p>
-      {/* <button>Easy</button>
-      <button>Medium</button>
-      <button>Hard</button> */}
     </div>
   );
 }

@@ -1,5 +1,9 @@
-function Card({ value }) {
-  return <div className="card">{value}</div>;
+function Card({ value, handleClick }) {
+  return (
+    <div className="card" onClick={handleClick}>
+      {value}
+    </div>
+  );
 }
 
 export default Card;
