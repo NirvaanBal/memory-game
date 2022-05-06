@@ -7,7 +7,8 @@ import Scoreboard from './components/Scoreboard';
 import Card from './components/Card';
 
 function App() {
-  const [numbers, setNumbers] = useState(shuffle(10));
+  const [difficulty, setDifficulty] = useState(100);
+  const [numbers, setNumbers] = useState(shuffle(difficulty));
   const [values, setValues] = useState([]);
   const [score, setScore] = useState(0);
   const [topScore, setTopScore] = useState(0);
@@ -19,17 +20,33 @@ function App() {
       setValues([]);
     } else {
       setValues([...values, value]);
-      setNumbers(shuffle(10));
+      setNumbers(shuffle(difficulty));
+    }
+  };
+
+  const changeDifficulty = (e) => {
+    const level = e.target.textContent.toLowerCase();
+    if (level === 'easy') {
+      setDifficulty(50);
+      setNumbers(shuffle(difficulty));
+    } else if (level === 'medium') {
+      setDifficulty(100);
+      setNumbers(shuffle(difficulty));
+    } else {
+      setDifficulty(200);
+      setNumbers(shuffle(difficulty));
     }
   };
 
   useEffect(() => {
     setScore(values.length);
+
+    return () => null;
   }, [values]);
 
   return (
     <>
-      <Header />
+      <Header handleDifficulty={changeDifficulty} />
       <Scoreboard best={topScore} score={score} />
       <div className="cards">
         {numbers.map((number, index) => (

@@ -7,7 +7,7 @@ function shuffle(upto) {
     items.push(value);
   }
 
-  return items;
+  return items.slice(0, 12);
 }
 
 export default shuffle;

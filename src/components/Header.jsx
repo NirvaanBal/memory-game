@@ -1,13 +1,13 @@
-function Header() {
+function Header({ handleDifficulty }) {
   return (
     <div className="header">
       <h1>Memory Card Game</h1>
-      <p>
-        Test your <strong>recalling</strong> skill
-      </p>
-      <p>
-        <b>Game ends on selecting same input twice.</b>
-      </p>
+      <p>Game ends on selecting same input twice.</p>
+      <div className="modes">
+        <button onClick={handleDifficulty}>Easy</button>
+        <button onClick={handleDifficulty}>Medium</button>
+        <button onClick={handleDifficulty}>Hard</button>
+      </div>
     </div>
   );
 }
