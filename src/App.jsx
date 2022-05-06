@@ -5,6 +5,7 @@ import shuffle from './utils/shuffle';
 import Header from './components/Header';
 import Scoreboard from './components/Scoreboard';
 import Card from './components/Card';
+import Footer from './components/Footer';
 
 function App() {
   const [difficulty, setDifficulty] = useState(100);
@@ -54,6 +55,7 @@ function App() {
           />
         ))}
       </div>
+      <Footer />
     </>
   );
 }
