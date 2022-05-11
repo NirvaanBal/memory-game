@@ -1,6 +1,6 @@
 # Memory Card Game
 
-A fun game to test one's recalling/recapitulating/retrospecting skills.
+A fun game to test one's recalling/recapitulating/retrospecting skills. [Preview](https://nirvaanbal.github.io/memory-game/).
 
 ## Features
 
