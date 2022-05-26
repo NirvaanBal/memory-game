@@ -14,6 +14,10 @@ A fun game to test one's recalling/recapitulating/retrospecting skills. [Live he
 - HTML
 - Vite
 
+## Raison d'être
+
+The aim behind this project was to effectively use state in functional components.
+
 ## Bibliography
 
 - Project Idea - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-memory-card)
